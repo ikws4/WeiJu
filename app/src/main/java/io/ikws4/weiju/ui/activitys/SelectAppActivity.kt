@@ -89,8 +89,12 @@ class SelectAppActivity : BasicActivity(), CoroutineScope by MainScope() {
         viewModel.appInfos.observe(this, Observer { appInfos ->
             appInfos.filter { appInfo ->
                 !appInfo.isSelect
-            }.filter { appInfo ->
-                appInfo.isSystemApp and weiJuSP.isHideSystemApp
+            }.filterNot { appInfo ->
+                if (weiJuSP.isHideSystemApp) {
+                    appInfo.isSystemApp
+                } else {
+                    false
+                }
             }.apply {
                 adapter.setNewData(this)
                 binding.isLoaded = isNotEmpty()
