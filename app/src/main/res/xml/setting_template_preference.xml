@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="config_template"
+        android:summary="io.ikws4.weiju.template"
+        android:title="@string/config_template" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="is_auto_apply_template"
+        android:summary="@string/auto_apply_template_summary"
+        android:title="@string/auto_apply_template" />
+
+</PreferenceScreen>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/translation_data">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_save"
+            android:key="is_save_offline_translation_data"
+            android:summary="@string/save_translation_data_summary"
+            android:title="@string/save_translation_data" />
+
+        <io.ikws4.weiju.ui.preferences.SeekBarPreference
+            android:defaultValue="50"
+            android:dependency="is_save_offline_translation_data"
+            android:key="save_offline_translation_data_word_count"
+            android:max="200"
+            android:summary="@string/word_count_limit_summary"
+            android:title="@string/word_count_limit"
+            app:min="2" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/translation_api">
+
+        <Preference
+            android:icon="@drawable/ic_sogou"
+            android:key="api_sogou"
+            android:title="@string/so_gou" />
+        <Preference
+            android:icon="@drawable/ic_baidu"
+            android:key="api_baidu"
+            android:title="@string/bai_du" />
+        <Preference
+            android:icon="@drawable/ic_youdao"
+            android:key="api_youdao"
+            android:title="@string/you_dao" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

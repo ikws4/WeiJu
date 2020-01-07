@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/app">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="is_boot_completed"
+            android:summary="@string/boot_completed_summary"
+            android:title="@string/boot_completed" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/filter">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="is_hide_system_app"
+            android:title="@string/hide_system_app" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/bug">
+
+        <Preference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_bug_report"
+            android:key="report_bug"
+            android:title="@string/report_bug" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

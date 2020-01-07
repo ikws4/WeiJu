@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="is_enable_variable"
+        android:title="@string/open" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:key="variable_model"
+        android:summary="ro.product.model=%s"
+        android:title="@string/pref_model" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:key="variable_brand"
+        android:summary="ro.product.brand=%s"
+        android:title="@string/pref_brand" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:key="variable_device"
+        android:summary="ro.product.device=%s"
+        android:title="@string/pref_device" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:key="variable_release"
+        android:summary="ro.build.version.release=%s"
+        android:title="@string/pref_android_version" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:key="variable_imei"
+        android:summary="%s"
+        android:title="IMEI" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:key="variable_imsi"
+        android:summary="%s"
+        android:title="IMSI" />
+
+</PreferenceScreen>

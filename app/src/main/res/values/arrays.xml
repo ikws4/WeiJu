@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="display_orientation_entries">
+        <item>Default</item>
+        <item>Sensor</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+
+    <string-array name="display_orientation_values">
+        <item>Default</item>
+        <item>4</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="custom_dpi_entries">
+        <item>Default</item>
+        <item>300</item>
+        <item>320</item>
+        <item>340</item>
+        <item>360</item>
+        <item>380</item>
+        <item>400</item>
+        <item>420</item>
+        <item>440</item>
+        <item>460</item>
+        <item>480</item>
+        <item>500</item>
+    </string-array>
+
+    <string-array name="custom_dpi_values">
+        <item>Default</item>
+        <item>300</item>
+        <item>320</item>
+        <item>340</item>
+        <item>360</item>
+        <item>380</item>
+        <item>400</item>
+        <item>420</item>
+        <item>440</item>
+        <item>460</item>
+        <item>480</item>
+        <item>500</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>Default</item>
+        <item>简体中文</item>
+        <item>繁體中文</item>
+        <item>English</item>
+        <item>日本語</item>
+        <item>Русский</item>
+    </string-array>
+
+    <string-array name="language_entry_values">
+        <item>Default</item>
+        <item>zh_CN</item>
+        <item>zh_TW</item>
+        <item>en_</item>
+        <item>ja_</item>
+        <item>ru_</item>
+    </string-array>
+
+    <string-array name="background_color_entries">
+        <item>Default</item>
+        <item>ColorPrimary</item>
+        <item>ColorPrimaryDark</item>
+        <item>ColorAccent</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="background_color_values">
+        <item>Default</item>
+        <item>ColorPrimary</item>
+        <item>ColorPrimaryDark</item>
+        <item>ColorAccent</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="icon_color_entries">
+        <item>Default</item>
+        <item>Grey</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="icon_color_values">
+        <item>Default</item>
+        <item>Grey</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="translation_api_entries">
+        <item>Sogou Free</item>
+        <item>Sogou</item>
+        <item>Baidu</item>
+        <item>Youdao</item>
+    </string-array>
+
+    <string-array name="translation_api_values">
+        <item>SogouFree</item>
+        <item>Sogou</item>
+        <item>Baidu</item>
+        <item>Youdao</item>
+    </string-array>
+
+    <string-array name="api_sogou_language_entries">
+        <item>Arabic</item>
+        <item>Estonian</item>
+        <item>Bulgarian</item>
+        <item>Polish</item>
+        <item>Korean</item>
+        <item>Bosnian (Latin)</item>
+        <item>Persian</item>
+        <item>Hmong Daw</item>
+        <item>Danish</item>
+        <item>German</item>
+        <item>Russian</item>
+        <item>French</item>
+        <item>Finnish</item>
+        <item>Klingon (pIqaD)</item>
+        <item>Klingon</item>
+        <item>Croatian</item>
+        <item>Querétaro Otomi</item>
+        <item>加泰罗尼亚 Catalan</item>
+        <item>Czech</item>
+        <item>Romanian</item>
+        <item>Latvian</item>
+        <item>Haitian Creole</item>
+        <item>Lithuanian</item>
+        <item>Dutch</item>
+        <item>Malay</item>
+        <item>Maltese</item>
+        <item>Portuguese</item>
+        <item>Japanese</item>
+        <item>Slovenian</item>
+        <item>Thai</item>
+        <item>Turkish</item>
+        <item>Serbian (Latin)</item>
+        <item>Serbian (Cyrillic)</item>
+        <item>Slovak</item>
+        <item>Kiswahili</item>
+        <item>南非的公用荷兰语</item>
+        <item>Norwegian</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Ukrainian</item>
+        <item>Urdu</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Welsh</item>
+        <item>Yucatec Maya</item>
+        <item>Hebrew</item>
+        <item>Chinese Simplified</item>
+        <item>Italian</item>
+        <item>Hindi</item>
+        <item>Indonesian</item>
+        <item>Chinese Traditional</item>
+        <item>Vietnamese</item>
+        <item>Swedish</item>
+        <item>Cantonese</item>
+        <item>fijian</item>
+        <item>Filipino</item>
+        <item>Samoan language</item>
+        <item>lea fakatonga</item>
+        <item>Tahiti language</item>
+        <item>Malagasy language</item>
+        <item>Bengali</item>
+    </string-array>
+
+    <string-array name="api_sogou_language_values">
+        <item>ar</item>
+        <item>et</item>
+        <item>bg</item>
+        <item>pl</item>
+        <item>ko</item>
+        <item>bs-Latn</item>
+        <item>fa</item>
+        <item>mww</item>
+        <item>da</item>
+        <item>de</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>fi</item>
+        <item>tlh-Qaak</item>
+        <item>tlh</item>
+        <item>hr</item>
+        <item>otq</item>
+        <item>ca</item>
+        <item>cs</item>
+        <item>ro</item>
+        <item>lv</item>
+        <item>ht</item>
+        <item>lt</item>
+        <item>nl</item>
+        <item>ms</item>
+        <item>mt</item>
+        <item>pt</item>
+        <item>ja</item>
+        <item>sl</item>
+        <item>th</item>
+        <item>tr</item>
+        <item>sr-Latn</item>
+        <item>sr-Cyrl</item>
+        <item>sk</item>
+        <item>sw</item>
+        <item>af</item>
+        <item>no</item>
+        <item>en</item>
+        <item>es</item>
+        <item>uk</item>
+        <item>ur</item>
+        <item>el</item>
+        <item>hu</item>
+        <item>cy</item>
+        <item>yua</item>
+        <item>he</item>
+        <item>zh-CHS</item>
+        <item>it</item>
+        <item>hi</item>
+        <item>id</item>
+        <item>zh-CHT</item>
+        <item>vi</item>
+        <item>sv</item>
+        <item>yue</item>
+        <item>fj</item>
+        <item>fil</item>
+        <item>sm</item>
+        <item>to</item>
+        <item>ty</item>
+        <item>mg</item>
+        <item>bn</item>
+    </string-array>
+
+    <string-array name="api_baidu_language_entries">
+        <item>自动检测</item>
+        <item>中文</item>
+        <item>英语</item>
+        <item>粤语</item>
+        <item>文言文</item>
+        <item>日语</item>
+        <item>韩语</item>
+        <item>法语</item>
+        <item>西班牙语</item>
+        <item>泰语</item>
+        <item>阿拉伯语</item>
+        <item>俄语</item>
+        <item>葡萄牙语</item>
+        <item>德语</item>
+        <item>意大利语</item>
+        <item>希腊语</item>
+        <item>荷兰语</item>
+        <item>波兰语</item>
+        <item>保加利亚语</item>
+        <item>爱沙尼亚语</item>
+        <item>丹麦语</item>
+        <item>芬兰语</item>
+        <item>捷克语</item>
+        <item>罗马尼亚语</item>
+        <item>斯洛文尼亚语</item>
+        <item>瑞典语</item>
+        <item>匈牙利语</item>
+        <item>繁体中文</item>
+        <item>越南语</item>
+    </string-array>
+
+    <string-array name="api_baidu_language_values">
+        <item>auto</item>
+        <item>zh</item>
+        <item>en</item>
+        <item>yue</item>
+        <item>wyw</item>
+        <item>jp</item>
+        <item>kor</item>
+        <item>fra</item>
+        <item>spa</item>
+        <item>th</item>
+        <item>ara</item>
+        <item>ru</item>
+        <item>pt</item>
+        <item>de</item>
+        <item>it</item>
+        <item>el</item>
+        <item>nl</item>
+        <item>pl</item>
+        <item>bul</item>
+        <item>est</item>
+        <item>dan</item>
+        <item>fin</item>
+        <item>cs</item>
+        <item>rom</item>
+        <item>slo</item>
+        <item>swe</item>
+        <item>hu</item>
+        <item>cht</item>
+        <item>vie</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="file" path="vungle" />
+    <exclude domain="file" path="_fetchData" />
+    <exclude domain="database" path="com_tonyodev_fetch.db" />
+    <exclude domain="sharedpref" path="com.vungle.sdk.xml" />
+    <exclude domain="sharedpref" path="com.tonyodev.fetch.shared_preferences.xml" />
+</full-backup-content>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="is_enable_screen"
+        android:title="@string/open" />
+
+    <DropDownPreference
+        android:defaultValue="Default"
+        android:dependency="is_enable_screen"
+        android:entries="@array/display_orientation_entries"
+        android:entryValues="@array/display_orientation_values"
+        android:icon="@drawable/ic_screen_rotation"
+        android:key="screen_orientation"
+        android:summary="@string/pref_screen_orientation_summary"
+        android:title="@string/orientation"
+        app:useSimpleSummaryProvider="true" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:dependency="is_enable_screen"
+        android:icon="@drawable/ic_center_focus_strong"
+        android:key="is_enable_force_screenshot"
+        android:summary="@string/pref_force_screenshot_summary"
+        android:title="@string/pref_force_screenshot_title" />
+
+    <ListPreference
+        android:defaultValue="Default"
+        android:dependency="is_enable_screen"
+        android:entries="@array/language_entries"
+        android:entryValues="@array/language_entry_values"
+        android:icon="@drawable/ic_language"
+        android:key="language"
+        android:summary="@string/pref_language_summary"
+        android:title="@string/language"
+        app:useSimpleSummaryProvider="true" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:dependency="is_enable_screen"
+        android:key="is_cancel_dialog"
+        android:title="@string/pref_cancel_dialog_title" />
+
+    <ListPreference
+        android:defaultValue="Default"
+        android:dependency="is_enable_screen"
+        android:entries="@array/custom_dpi_entries"
+        android:entryValues="@array/custom_dpi_values"
+        android:key="custom_dpi"
+        android:summary="%s"
+        android:title="DPI"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>

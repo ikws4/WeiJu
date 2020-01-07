@@ -1,0 +1,128 @@
+ext {
+    nav_version_ktx = '2.2.0-rc04'
+    material_version = '1.2.0-alpha03'
+    lifecycle_version = '2.2.0-rc03'
+    room_version = '2.2.3'
+    work_version = '2.3.0-beta02'
+}
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    def buildDateTime = projects.hasProperty("debug") ? 0 : new Date().format('yyMMddHHmm').toInteger()
+
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId 'io.ikws4.weiju'
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode buildDateTime
+        versionName "0.3.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            //applicationIdSuffix ".release"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            //debuggable true
+            //applicationIdSuffix ".debug"
+            //signingConfig signingConfigs.debug
+            ext.alwaysUpdateBuildId = false
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0-alpha01'
+    implementation 'androidx.core:core-ktx:1.2.0-rc01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    // navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version_ktx"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version_ktx"
+    // preference
+    implementation 'androidx.preference:preference-ktx:1.1.0'
+    // lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    // safe room
+    implementation "com.commonsware.cwac:saferoom.x:1.1.1"
+    // workManager
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    // material
+    implementation "com.google.android.material:material:$material_version"
+    // google ads
+    implementation 'com.google.firebase:firebase-ads:18.3.0'
+
+    // material-dialogs
+    implementation 'com.afollestad.material-dialogs:core:3.1.0'
+    implementation 'com.afollestad.material-dialogs:bottomsheets:3.1.0'
+    implementation 'com.afollestad.material-dialogs:input:3.1.0'
+    //implementation 'com.afollestad.material-dialogs:color:3.1.0'
+
+    // firebase
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    //implementation 'com.google.firebase:firebase-database:18.0.1'
+//    implementation 'com.google.firebase:firebase-auth:18.1.0'
+
+    // okHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.3.0'
+
+    // markdown view
+    //implementation 'com.github.tiagohm.MarkdownView:library:0.19.0'
+
+    // xposed
+    compileOnly 'de.robv.android.xposed:api:82'
+    implementation 'com.github.ikws4:xposed-ktx:1.0'
+
+    // test
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // vungle ads
+    implementation('com.vungle:publisher-sdk-android:6.3.24@aar') {
+        transitive = true
+    }
+    implementation 'com.google.ads.mediation:vungle:6.3.24.1'
+    // unity ads
+    implementation 'com.unity3d.ads:unity-ads:3.1.0'
+    implementation 'com.google.ads.mediation:unity:3.1.0.0'
+
+    //implementation project(':flutter')
+}

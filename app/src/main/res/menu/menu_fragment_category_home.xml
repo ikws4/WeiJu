@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_restore"
+        android:icon="@drawable/ic_restore"
+        android:title="@string/reset"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_more_vert"
+        android:title="@string/more_options"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction">
+
+        <menu>
+            <item
+                android:icon="@drawable/ic_save"
+                android:id="@+id/action_save_as_template"
+                android:title="@string/hook_category_save_as_template" />
+
+            <item
+                android:id="@+id/action_apply_template"
+                android:icon="@drawable/ic_move_to_inbox"
+                android:title="@string/hook_category_apply_template" />
+            <item
+                android:id="@+id/action_force_stop"
+                android:icon="@drawable/ic_exit_to_app"
+                android:title="@string/hook_category_force_stop" />
+        </menu>
+
+    </item>
+
+
+</menu>

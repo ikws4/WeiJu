@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="general_screen"
+        android:summary="@string/general_screen_summary"
+        app:title="@string/general" />
+
+    <Preference
+        android:key="template_screen"
+        android:summary="@string/template_screen_summary"
+        android:title="@string/template" />
+
+    <Preference
+        android:key="translation_screen"
+        android:summary="@string/translation_screen_summary"
+        android:title="@string/translation" />
+
+    <Preference
+        android:key="about_screen"
+        android:summary="@string/about_screen_summary"
+        android:title="@string/about" />
+
+</PreferenceScreen>

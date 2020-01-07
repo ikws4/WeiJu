@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="is_enable_translation"
+        android:title="@string/open" />
+
+    <DropDownPreference
+        android:defaultValue="Sogou"
+        android:dependency="is_enable_translation"
+        android:entries="@array/translation_api_entries"
+        android:entryValues="@array/translation_api_values"
+        android:key="translation_api"
+        android:summary="%s"
+        android:title="@string/translation_api" />
+
+    <Preference
+        android:dependency="is_enable_translation"
+        android:icon="@drawable/ic_translate"
+        android:key="translation_data_files"
+        android:summary="@string/translation_data_files_summary"
+        app:title="@string/translation_data_files" />
+
+    <PreferenceCategory
+        android:dependency="is_enable_translation"
+        android:key="sogou"
+        android:title="@string/so_gou">
+
+        <ListPreference
+            android:defaultValue="en"
+            android:entries="@array/api_sogou_language_entries"
+            android:entryValues="@array/api_sogou_language_values"
+            android:key="api_sogou_from"
+            android:summary="%s"
+            android:title="@string/translation_from" />
+
+        <ListPreference
+            android:defaultValue="zh-CHS"
+            android:entries="@array/api_sogou_language_entries"
+            android:entryValues="@array/api_sogou_language_values"
+            android:key="api_sogou_to"
+            android:summary="%s"
+            android:title="@string/translation_to" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:dependency="is_enable_translation"
+        android:key="baidu"
+        android:title="@string/bai_du">
+
+        <ListPreference
+            android:defaultValue="auto"
+            android:entries="@array/api_baidu_language_entries"
+            android:entryValues="@array/api_baidu_language_values"
+            android:key="api_baidu_from"
+            android:summary="%s"
+            android:title="@string/translation_from" />
+
+        <ListPreference
+            android:defaultValue="en"
+            android:entries="@array/api_baidu_language_entries"
+            android:entryValues="@array/api_baidu_language_values"
+            android:key="api_baidu_to"
+            android:summary="%s"
+            android:title="@string/translation_to" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:dependency="is_enable_translation"
+        android:key="youdao"
+        android:title="@string/you_dao">
+
+        <ListPreference
+            android:defaultValue="en"
+            android:entries="@array/api_sogou_language_entries"
+            android:entryValues="@array/api_sogou_language_values"
+            android:key="api_youdao_from"
+            android:summary="%s"
+            android:title="@string/translation_from" />
+
+        <ListPreference
+            android:defaultValue="zh-CHS"
+            android:entries="@array/api_sogou_language_entries"
+            android:entryValues="@array/api_sogou_language_values"
+            android:key="api_youdao_to"
+            android:summary="%s"
+            android:title="@string/translation_to" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

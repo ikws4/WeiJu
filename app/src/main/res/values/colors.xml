@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--theme color-->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorSecondary">#448aff</color>
+    <color name="colorAccent">#448aff</color>
+    <color name="colorWindowBackground">#fafafa</color>
+    <color name="divideColor">#eeeeee</color>
+
+    <color name="colorWhite">#ffffff</color>
+
+    <!--icon tint-->
+    <color name="gary">#757575</color>
+    <color name="red">#e16b8c</color>
+    <color name="green">#90b44b</color>
+    <color name="blue">#58b2dc</color>
+    <color name="amber">#ca7a2c</color>
+    <color name="yellow">#ffC408</color>
+    <color name="google_blue">#4286f3</color>
+</resources>

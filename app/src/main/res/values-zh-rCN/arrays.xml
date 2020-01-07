@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="display_orientation_entries">
+        <item>默认</item>
+        <item>传感器</item>
+        <item>横屏显示</item>
+        <item>竖屏显示</item>
+    </string-array>
+
+    <string-array name="custom_dpi_entries">
+        <item>默认</item>
+        <item>300</item>
+        <item>320</item>
+        <item>340</item>
+        <item>360</item>
+        <item>380</item>
+        <item>400</item>
+        <item>420</item>
+        <item>440</item>
+        <item>460</item>
+        <item>480</item>
+        <item>500</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>默认</item>
+        <item>简体中文</item>
+        <item>繁體中文</item>
+        <item>English</item>
+        <item>日本語</item>
+        <item>Русский</item>
+    </string-array>
+
+    <string-array name="background_color_entries">
+        <item>默认</item>
+        <item>方案一</item>
+        <item>方案二</item>
+        <item>方案三</item>
+        <item>自定义</item>
+    </string-array>
+
+    <string-array name="icon_color_entries">
+        <item>默认</item>
+        <item>浅灰</item>
+        <item>纯白</item>
+    </string-array>
+
+    <string-array name="translation_api_entries">
+        <item>搜狗免费</item>
+        <item>搜狗</item>
+        <item>百度</item>
+        <item>有道</item>
+    </string-array>
+
+    <string-array name="api_sogou_language_entries">
+        <item>阿拉伯语</item>
+        <item>爱沙尼亚语</item>
+        <item>保加利亚语</item>
+        <item>波兰语</item>
+        <item>韩语</item>
+        <item>波斯尼亚语</item>
+        <item>波斯语</item>
+        <item>白苗文</item>
+        <item>丹麦语</item>
+        <item>德语</item>
+        <item>俄语</item>
+        <item>法语</item>
+        <item>芬兰语</item>
+        <item>克林贡语(piqaD)</item>
+        <item>克林贡语</item>
+        <item>克罗地亚语</item>
+        <item>克雷塔罗奥托米语</item>
+        <item>加泰隆语</item>
+        <item>捷克语</item>
+        <item>罗马尼亚语</item>
+        <item>拉脱维亚语</item>
+        <item>海地克里奥尔语</item>
+        <item>立陶宛语</item>
+        <item>荷兰语</item>
+        <item>马来语</item>
+        <item>马耳他语</item>
+        <item>葡萄牙语</item>
+        <item>日语</item>
+        <item>斯洛文尼亚语</item>
+        <item>泰语</item>
+        <item>土耳其语</item>
+        <item>塞尔维亚语(拉丁文)</item>
+        <item>塞尔维亚语(西里尔文)</item>
+        <item>斯洛伐克语</item>
+        <item>斯瓦希里语</item>
+        <item>南非荷兰语</item>
+        <item>挪威语</item>
+        <item>英语</item>
+        <item>西班牙语</item>
+        <item>乌克兰语</item>
+        <item>乌尔都语</item>
+        <item>希腊语</item>
+        <item>匈牙利语</item>
+        <item>威尔士语</item>
+        <item>尤卡坦玛雅语</item>
+        <item>希伯来语</item>
+        <item>中文</item>
+        <item>意大利语</item>
+        <item>印地语	</item>
+        <item>印度尼西亚语</item>
+        <item>中文繁体</item>
+        <item>越南语</item>
+        <item>瑞典语</item>
+        <item>粤语(繁体)</item>
+        <item>斐济</item>
+        <item>菲律宾语</item>
+        <item>萨摩亚语</item>
+        <item>汤加语</item>
+        <item>塔希提语</item>
+        <item>马尔加什语	</item>
+        <item>孟加拉语</item>
+    </string-array>
+
+</resources>

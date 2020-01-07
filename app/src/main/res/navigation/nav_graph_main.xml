@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainHomeFragment">
+
+    <fragment
+        android:id="@+id/mainHomeFragment"
+        android:name="io.ikws4.weiju.ui.fragments.MainHomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main_home">
+        <action
+            android:id="@+id/to_categoryActivity"
+            app:destination="@id/categoryActivity" />
+        <action
+            android:id="@+id/to_selectAppActivity"
+            app:destination="@id/selectAppActivity" />
+        <action
+            android:id="@+id/to_settingActivity"
+            app:destination="@id/settingActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/categoryActivity"
+        android:name="io.ikws4.weiju.ui.activitys.CategoryActivity">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+    </activity>
+
+    <activity
+        android:id="@+id/selectAppActivity"
+        android:name="io.ikws4.weiju.ui.activitys.SelectAppActivity" />
+
+    <activity
+        android:id="@+id/settingActivity"
+        android:name="io.ikws4.weiju.ui.activitys.SettingActivity">
+        <argument
+            android:name="pageName"
+            app:argType="string" />
+    </activity>
+
+</navigation>

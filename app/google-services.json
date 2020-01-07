@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "233827984030",
+    "firebase_url": "https://weiju-247903.firebaseio.com",
+    "project_id": "weiju-247903",
+    "storage_bucket": "weiju-247903.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233827984030:android:b08aa905bdbb3b35",
+        "android_client_info": {
+          "package_name": "io.ikws4.weiju"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233827984030-oe2r7oonbrrmfsk7tmho7uutafnhla1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQEKTvXKC4_SCKhUhsSiIZxyGJ7h4KHIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233827984030-oe2r7oonbrrmfsk7tmho7uutafnhla1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

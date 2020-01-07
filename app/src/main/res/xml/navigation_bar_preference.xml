@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="is_enable_nav_bar"
+        android:title="@string/open" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:dependency="is_enable_nav_bar"
+        android:icon="@drawable/ic_block"
+        android:key="is_hide_nav_bar"
+        android:summary="@string/nav_bar_hide_summary"
+        android:title="@string/hide" />
+
+    <DropDownPreference
+        android:defaultValue="Default"
+        android:dependency="is_enable_nav_bar"
+        android:entries="@array/background_color_entries"
+        android:entryValues="@array/background_color_values"
+        android:icon="@drawable/ic_opacity"
+        android:key="immersive_nav_bar"
+        app:useSimpleSummaryProvider="true"
+        android:summary="@string/nav_bar_background_color_summary"
+        android:title="@string/background_color" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:defaultValue="Default"
+        android:enabled="false"
+        android:icon="@drawable/ic_color_lens"
+        android:key="custom_nav_bar_color"
+        android:summary="@string/nav_bar_custom_color_summary"
+        android:title="@string/custom_color" />
+
+    <DropDownPreference
+        android:defaultValue="Default"
+        android:dependency="is_enable_nav_bar"
+        android:entries="@array/icon_color_entries"
+        android:entryValues="@array/icon_color_values"
+        android:icon="@drawable/ic_wb_sunny"
+        android:key="nav_bar_icon_color"
+        app:useSimpleSummaryProvider="true"
+        android:summary="@string/nav_bar_icon_color_summary"
+        android:title="@string/icon_color" />
+
+</PreferenceScreen>

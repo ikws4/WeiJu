@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_category"
+    app:startDestination="@id/categoryHomeFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/categoryHomeFragment"
+        android:name="io.ikws4.weiju.ui.fragments.CategoryHomeFragment"
+        tools:layout="@layout/fragment_category_home">
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+        <action
+            android:id="@+id/to_categoryStatusBarFragment"
+            app:destination="@id/categoryStatusBarFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_enter"
+            app:popExitAnim="@anim/fragment_exit" />
+        <action
+            android:id="@+id/to_categoryNavBarFragment"
+            app:destination="@id/categoryNavBarFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_enter"
+            app:popExitAnim="@anim/fragment_exit" />
+        <action
+            android:id="@+id/to_categoryScreenFragment"
+            app:destination="@id/categoryScreenFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_enter"
+            app:popExitAnim="@anim/fragment_exit" />
+        <action
+            android:id="@+id/to_categoryTranslationFragment"
+            app:destination="@id/categoryTranslationFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_enter"
+            app:popExitAnim="@anim/fragment_exit" />
+        <action
+            android:id="@+id/to_categoryVariableFragment"
+            app:destination="@id/categoryVariableFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_enter"
+            app:popExitAnim="@anim/fragment_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryStatusBarFragment"
+        android:name="io.ikws4.weiju.ui.fragments.CategoryStatusBarFragment"
+        android:label="@string/hook_category_status_bar">
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryNavBarFragment"
+        android:name="io.ikws4.weiju.ui.fragments.CategoryNavBarFragment"
+        android:label="@string/hook_category_navigation_bar">
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryScreenFragment"
+        android:name="io.ikws4.weiju.ui.fragments.CategoryScreenFragment"
+        android:label="@string/hook_category_screen">
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryTranslationFragment"
+        android:name="io.ikws4.weiju.ui.fragments.CategoryTranslationFragment"
+        android:label="@string/hook_category_translation">
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+        <action
+            android:id="@+id/to_translationEditorActivity"
+            app:destination="@id/translationEditorActivity" />
+        <action
+            android:id="@+id/to_settingActivity"
+            app:destination="@id/settingActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryVariableFragment"
+        android:name="io.ikws4.weiju.ui.fragments.CategoryVariableFragment"
+        android:label="@string/hook_category_variable">
+        <argument
+            android:name="pkgName"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/translationEditorActivity"
+        android:name="io.ikws4.weiju.ui.activitys.TranslationEditorActivity">
+        <argument
+            android:name="prefName"
+            app:argType="string" />
+    </activity>
+    <activity
+        android:id="@+id/settingActivity"
+        android:name="io.ikws4.weiju.ui.activitys.SettingActivity">
+        <argument
+            android:name="pageName"
+            app:argType="string" />
+    </activity>
+
+
+</navigation>
