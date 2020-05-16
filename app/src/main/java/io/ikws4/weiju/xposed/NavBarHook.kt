@@ -8,15 +8,15 @@ import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
 import android.widget.Toast
+import de.robv.android.xposed.XSharedPreferences
 import io.ikws4.library.xposedktx.hookMethod
-import io.ikws4.weiju.utilities.XSPUtils
 
-class NavBarHook(sp: XSPUtils) {
-    private val isEnable = sp.getBoolean("is_enable_nav_bar")
-    private val isHide = sp.getBoolean("is_hide_nav_bar")
-    private val immersive = sp.getString("immersive_nav_bar")
-    private val customColor = sp.getString("custom_nav_bar_color")
-    private val iconColor = sp.getString("nav_bar_icon_color")
+class NavBarHook(sp: XSharedPreferences) {
+    private val isEnable = sp.getBoolean("is_enable_nav_bar", false)
+    private val isHide = sp.getBoolean("is_hide_nav_bar", false)
+    private val immersive = sp.getString("immersive_nav_bar", "")
+    private val customColor = sp.getString("custom_nav_bar_color", "")
+    private val iconColor = sp.getString("nav_bar_icon_color", "")
 
     init {
         if (isEnable) {

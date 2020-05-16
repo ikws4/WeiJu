@@ -27,6 +27,12 @@
 
     <io.ikws4.weiju.ui.preferences.EditTextPreference
         android:dependency="is_enable_variable"
+        android:key="variable_product_name"
+        android:summary="ro.product.name=%s"
+        android:title="@string/pref_product_name" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
         android:key="variable_release"
         android:summary="ro.build.version.release=%s"
         android:title="@string/pref_android_version" />

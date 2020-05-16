@@ -32,6 +32,7 @@
     <string name="pref_brand">厂商</string>
     <string name="pref_cancel_dialog_title">对话框取消</string>
     <string name="pref_device">代号</string>
+    <string name="pref_product_name">代号二</string>
     <string name="pref_force_screenshot_summary">解除禁止截图和录屏的限制</string>
     <string name="pref_force_screenshot_title"><![CDATA[强制截图录屏]]></string>
     <string name="pref_language_summary">如果无效，请将应用中的语言设置为跟随系统 (%s)</string>

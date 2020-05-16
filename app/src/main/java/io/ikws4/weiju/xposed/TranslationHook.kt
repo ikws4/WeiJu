@@ -8,8 +8,7 @@ import androidx.core.content.contentValuesOf
 import io.ikws4.library.xposedktx.hookMethod
 import io.ikws4.library.xposedktx.invokeMethod
 import io.ikws4.weiju.provider.DatabaseProvider
-import io.ikws4.weiju.utilities.WEIJU_SP
-import io.ikws4.weiju.utilities.XSPUtils
+import io.ikws4.weiju.utilities.XSharedPreferencesUtil
 import kotlinx.coroutines.*
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
@@ -35,16 +34,21 @@ import kotlin.random.Random
  */
 @ExperimentalCoroutinesApi
 class TranslationHook(context: Context, private val pkgName: String) {
-    private val sp = XSPUtils(context, pkgName)
-    private val weiJuSp = XSPUtils(context, WEIJU_SP)
+    private val sp = XSharedPreferencesUtil.get(context, pkgName)
+    private val weiJuSp = XSharedPreferencesUtil.getAppConfig(context)
+
     // 是否开启翻译功能
-    private val isEnable = sp.getBoolean("is_enable_translation")
+    private val isEnable = sp.getBoolean("is_enable_translation", false)
+
     // 是否保存翻译数据
-    private val isSaveOfflineTranslationData = weiJuSp.getBoolean("is_save_offline_translation_data")
+    private val isSaveOfflineTranslationData = weiJuSp.getBoolean("is_save_offline_translation_data", false)
+
     // 保存翻译的字符限制
-    private val saveOfflineTranslationDataWordCount = weiJuSp.getInt("save_offline_translation_data_word_count")
+    private val saveOfflineTranslationDataWordCount = weiJuSp.getInt("save_offline_translation_data_word_count", 0)
+
     // 获取使用的api
-    private val translationApi = sp.getString("translation_api")
+    private val translationApi = sp.getString("translation_api", "")!!
+
     // 生成随机数，用于api接口
     private val salt = Random(1).nextInt().toString()
 
@@ -52,28 +56,28 @@ class TranslationHook(context: Context, private val pkgName: String) {
         if (isEnable) {
             when (translationApi) {
                 "Sogou" -> {
-                    val from = sp.getString("api_sogou_from")
-                    val to = sp.getString("api_sogou_to")
-                    val appid = weiJuSp.getString("api_sogou_appid")
-                    val key = weiJuSp.getString("api_sogou_key")
+                    val from = sp.getString("api_sogou_from", "")!!
+                    val to = sp.getString("api_sogou_to", "")!!
+                    val appid = weiJuSp.getString("api_sogou_appid", "")!!
+                    val key = weiJuSp.getString("api_sogou_key", "")!!
                     translation(from, to) {
                         sogou(it, from, to, appid, key)
                     }
                 }
                 "Baidu" -> {
-                    val from = sp.getString("api_baidu_from")
-                    val to = sp.getString("api_baidu_to")
-                    val appid = weiJuSp.getString("api_baidu_appid")
-                    val key = weiJuSp.getString("api_baidu_key")
+                    val from = sp.getString("api_baidu_from", "")!!
+                    val to = sp.getString("api_baidu_to", "")!!
+                    val appid = weiJuSp.getString("api_baidu_appid", "")!!
+                    val key = weiJuSp.getString("api_baidu_key", "")!!
                     translation(from, to) {
                         baidu(it, from, to, appid, key)
                     }
                 }
                 "Youdao" -> {
-                    val from = sp.getString("api_youdao_from")
-                    val to = sp.getString("api_youdao_to")
-                    val appid = weiJuSp.getString("api_youdao_appid")
-                    val key = weiJuSp.getString("api_youdao_key")
+                    val from = sp.getString("api_youdao_from", "")!!
+                    val to = sp.getString("api_youdao_to", "")!!
+                    val appid = weiJuSp.getString("api_youdao_appid", "")!!
+                    val key = weiJuSp.getString("api_youdao_key", "")!!
                     translation(from, to) {
                         youdao(it, from, to, appid, key)
                     }
@@ -252,7 +256,7 @@ class TranslationHook(context: Context, private val pkgName: String) {
                 }
             })
     }
-    
+
     /**
      * 使用方法
      * translation(from,to){query->

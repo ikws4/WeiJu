@@ -38,6 +38,7 @@
     <string name="pref_model">Model</string>
     <string name="pref_brand">Brand</string>
     <string name="pref_device">Device</string>
+    <string name="pref_product_name">Product name</string>
     <string name="pref_android_version">Android version</string>
     <string name="open">Open</string>
     <string name="hide">Hide</string>

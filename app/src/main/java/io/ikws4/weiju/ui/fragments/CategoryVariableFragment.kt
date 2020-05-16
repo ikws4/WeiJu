@@ -48,6 +48,9 @@ class CategoryVariableFragment : PreferenceFragmentCompat() {
         findPreference<EditTextPreference>("variable_device")!!.apply {
             if (text == null) text = Build.DEVICE
         }
+        findPreference<EditTextPreference>("variable_product_name")!!.apply {
+            if (text == null) text = Build.PRODUCT
+        }
         findPreference<EditTextPreference>("variable_release")!!.apply {
             if (text == null) text = Build.VERSION.RELEASE
         }
