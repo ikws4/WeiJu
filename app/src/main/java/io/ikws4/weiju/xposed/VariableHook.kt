@@ -6,16 +6,17 @@ import android.telephony.TelephonyManager
 import de.robv.android.xposed.XSharedPreferences
 import io.ikws4.library.xposedktx.replaceMethod
 import io.ikws4.library.xposedktx.setStaticObjectField
+import io.ikws4.weiju.utilities.XSPUtils
 
-class VariableHook(sp: XSharedPreferences) {
-    private val isEnable = sp.getBoolean("is_enable_variable", false)
-    private val device = sp.getString("variable_device", "")
-    private val productName = sp.getString("variable_product_name", "")
-    private val model = sp.getString("variable_model", "")
-    private val brand = sp.getString("variable_brand", "")
-    private val release = sp.getString("variable_release", "")
-    private val imei = sp.getString("variable_imei", "")
-    private val imsi = sp.getString("variable_imsi", "")
+class VariableHook(sp: XSPUtils) {
+    private val isEnable = sp.getBoolean("is_enable_variable")
+    private val device = sp.getString("variable_device")
+    private val productName = sp.getString("variable_product_name")
+    private val model = sp.getString("variable_model")
+    private val brand = sp.getString("variable_brand")
+    private val release = sp.getString("variable_release")
+    private val imei = sp.getString("variable_imei")
+    private val imsi = sp.getString("variable_imsi")
 
     init {
         if (isEnable) {

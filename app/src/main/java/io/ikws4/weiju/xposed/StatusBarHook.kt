@@ -13,12 +13,12 @@ import de.robv.android.xposed.XSharedPreferences
 import io.ikws4.library.xposedktx.hookMethod
 import io.ikws4.weiju.utilities.XSPUtils
 
-class StatusBarHook(sp: XSharedPreferences) {
-    private val isEnable = sp.getBoolean("is_enable_status_bar",false)
-    private val isHide = sp.getBoolean("is_hide_status_bar",false)
-    private val immersive = sp.getString("immersive_status_bar","")
-    private val customColor = sp.getString("custom_status_bar_color","")
-    private val iconColor = sp.getString("status_bar_icon_color","")
+class StatusBarHook(sp: XSPUtils) {
+    private val isEnable = sp.getBoolean("is_enable_status_bar")
+    private val isHide = sp.getBoolean("is_hide_status_bar")
+    private val immersive = sp.getString("immersive_status_bar")
+    private val customColor = sp.getString("custom_status_bar_color")
+    private val iconColor = sp.getString("status_bar_icon_color")
 
     init {
         if (isEnable) {

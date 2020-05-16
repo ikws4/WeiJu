@@ -10,16 +10,17 @@ import android.view.Window
 import android.view.WindowManager
 import de.robv.android.xposed.XSharedPreferences
 import io.ikws4.library.xposedktx.*
+import io.ikws4.weiju.utilities.XSPUtils
 import java.util.*
 
 
-class ScreenHook(sp: XSharedPreferences) {
-    private val isEnable = sp.getBoolean("is_enable_screen", false)
-    private val screenOrientation = sp.getString("screen_orientation", "")
-    private val isForceScreenshot = sp.getBoolean("is_enable_force_screenshot", false)
-    private val language = sp.getString("language", "")
-    private val isCancelDialog = sp.getBoolean("is_cancel_dialog", false)
-    private val dpi = sp.getString("custom_dpi", "")
+class ScreenHook(sp: XSPUtils) {
+    private val isEnable = sp.getBoolean("is_enable_screen")
+    private val screenOrientation = sp.getString("screen_orientation")
+    private val isForceScreenshot = sp.getBoolean("is_enable_force_screenshot")
+    private val language = sp.getString("language")
+    private val isCancelDialog = sp.getBoolean("is_cancel_dialog")
+    private val dpi = sp.getString("custom_dpi")
 
     init {
         if (isEnable) {

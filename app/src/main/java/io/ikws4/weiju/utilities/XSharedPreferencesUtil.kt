@@ -18,23 +18,23 @@ internal object XSharedPreferencesUtil {
         return context.filesDir.parentFile!!.parent!!
     }
 
+
     fun get(
         context: Context, packageName: String, prefFileName: String
     ): XSharedPreferences {
         val file =
             File(getUserDataPathFromContext(context), "$packageName/shared_prefs/$prefFileName.xml")
+
         return XSharedPreferences(file)
     }
 
     fun get(
         context: Context, prefFileName: String
     ): XSharedPreferences {
-        val file =
-            File(getUserDataPathFromContext(context), "$PACKAGE_NAME/shared_prefs/$prefFileName.xml")
-        return XSharedPreferences(file)
+        return get(context, PACKAGE_NAME, prefFileName)
     }
 
-    fun getHookList(context: Context):XSharedPreferences{
+    fun getHookList(context: Context): XSharedPreferences {
         return get(context, PACKAGE_NAME, HOOK_LIST_SP)
     }
 
