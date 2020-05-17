@@ -54,6 +54,12 @@ class CategoryVariableFragment : PreferenceFragmentCompat() {
         findPreference<EditTextPreference>("variable_release")!!.apply {
             if (text == null) text = Build.VERSION.RELEASE
         }
+        findPreference<EditTextPreference>("variable_longitude")!!.apply {
+            if (text == null) text = ""
+        }
+        findPreference<EditTextPreference>("variable_latitude")!!.apply {
+            if (text == null) text = ""
+        }
         findPreference<EditTextPreference>("variable_imei")!!.apply {
             if (text == null) text = imei
         }

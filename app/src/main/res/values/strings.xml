@@ -116,5 +116,7 @@
     <string name="exclude_from_recent">Exclude from recent</string>
     <string name="development">Development</string>
     <string name="toast_color">Toast color</string>
+    <string name="pref_longitude">Longitude</string>
+    <string name="pref_latitude">Latitude</string>
 
 </resources>

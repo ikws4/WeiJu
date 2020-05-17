@@ -37,7 +37,7 @@ class MainHook : IXposedHookLoadPackage {
                 NavBarHook(sp)
                 ScreenHook(sp)
                 TranslationHook(application, pkgName)
-                VariableHook(sp)
+                VariableHook(sp,lpparam.classLoader)
             }
             isRunning = true
         }

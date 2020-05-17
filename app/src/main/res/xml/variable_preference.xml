@@ -39,12 +39,28 @@
 
     <io.ikws4.weiju.ui.preferences.EditTextPreference
         android:dependency="is_enable_variable"
+        android:inputType="number"
+        android:key="variable_longitude"
+        android:summary="%s"
+        android:title="@string/pref_longitude" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:inputType="number"
+        android:key="variable_latitude"
+        android:summary="%s"
+        android:title="@string/pref_latitude" />
+
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
+        android:dependency="is_enable_variable"
+        android:inputType="number"
         android:key="variable_imei"
         android:summary="%s"
         android:title="IMEI" />
 
     <io.ikws4.weiju.ui.preferences.EditTextPreference
         android:dependency="is_enable_variable"
+        android:inputType="number"
         android:key="variable_imsi"
         android:summary="%s"
         android:title="IMSI" />

@@ -46,6 +46,7 @@ abstract class AppDatabase : RoomDatabase() {
             val editText = EditText(context)
             editText.setText(WEIJU_PKG_NAME)
             val safeHelperFactory = SafeHelperFactory.fromUser(editText.text)
+
             return Room.databaseBuilder(context, AppDatabase::class.java, DATABASE_NAME)
                 .openHelperFactory(safeHelperFactory)
                 .addMigrations(MIGRATION_1_2)

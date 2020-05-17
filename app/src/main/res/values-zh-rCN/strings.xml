@@ -114,4 +114,6 @@
     <string name="exclude_from_recent">从任务栏排除</string>
     <string name="development">开发者</string>
     <string name="toast_color">Toast颜色</string>
+    <string name="pref_longitude">经度</string>
+    <string name="pref_latitude">维度</string>
 </resources>
