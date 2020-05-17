@@ -8,6 +8,7 @@ import io.ikws4.library.xposedktx.hookMethod
 import io.ikws4.library.xposedktx.replaceMethod
 import io.ikws4.library.xposedktx.setStaticObjectField
 import io.ikws4.weiju.utilities.XSPUtils
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 class VariableHook(sp: XSPUtils, private val classLoader: ClassLoader) {
     private val isEnable = sp.getBoolean("is_enable_variable")
@@ -16,8 +17,8 @@ class VariableHook(sp: XSPUtils, private val classLoader: ClassLoader) {
     private val model = sp.getString("variable_model")
     private val brand = sp.getString("variable_brand")
     private val release = sp.getString("variable_release")
-    private val longitude = sp.getString("variable_longitude").toDouble()
-    private val latitude = sp.getString("variable_latitude").toDouble()
+    private val longitude = sp.getString("variable_longitude")
+    private val latitude = sp.getString("variable_latitude")
     private val imei = sp.getString("variable_imei")
     private val imsi = sp.getString("variable_imsi")
 
@@ -55,21 +56,42 @@ class VariableHook(sp: XSPUtils, private val classLoader: ClassLoader) {
         Build.VERSION::class.java.setStaticObjectField("RELEASE", release)
     }
 
+    @ExperimentalCoroutinesApi
     private fun replaceLocationInfo() {
         Location::class.java.hookMethod("getLongitude") { param ->
-            param.result = this@VariableHook.longitude
+            try {
+                param.result =
+                    this@VariableHook.longitude.toDouble()
+            } catch (e: Exception) {
+                MainHook.log(e)
+            }
         }
         Location::class.java.hookMethod("getLatitude") { param ->
-            param.result = this@VariableHook.latitude
+            try {
+                param.result =
+                    this@VariableHook.latitude.toDouble()
+            } catch (e: Exception) {
+                MainHook.log(e)
+            }
         }
 
         // 百度
         val bdLocation = "com.baidu.location.BDLocation"
         bdLocation.hookMethod(classLoader, "getLongitude") { param ->
-            param.result = this@VariableHook.longitude
+            try {
+                param.result =
+                    this@VariableHook.longitude.toDouble()
+            } catch (e: Exception) {
+                MainHook.log(e)
+            }
         }
         bdLocation.hookMethod(classLoader, "getLatitude") { param ->
-            param.result = this@VariableHook.latitude
+            try {
+                param.result =
+                    this@VariableHook.latitude.toDouble()
+            } catch (e: Exception) {
+                MainHook.log(e)
+            }
         }
     }
 
