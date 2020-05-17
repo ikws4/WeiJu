@@ -10,6 +10,7 @@ import io.ikws4.library.xposedktx.setStaticObjectField
 import io.ikws4.weiju.utilities.XSPUtils
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 class VariableHook(sp: XSPUtils, private val classLoader: ClassLoader) {
     private val isEnable = sp.getBoolean("is_enable_variable")
     private val device = sp.getString("variable_device")
@@ -56,7 +57,6 @@ class VariableHook(sp: XSPUtils, private val classLoader: ClassLoader) {
         Build.VERSION::class.java.setStaticObjectField("RELEASE", release)
     }
 
-    @ExperimentalCoroutinesApi
     private fun replaceLocationInfo() {
         Location::class.java.hookMethod("getLongitude") { param ->
             try {

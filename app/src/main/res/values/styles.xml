@@ -15,7 +15,7 @@
         <item name="snackbarStyle">@style/SnackbarStyle</item>
         <item name="appBarLayoutStyle">@style/Widget.MaterialComponents.AppBarLayout.Surface</item>
         <item name="md_corner_radius">8dp</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+<!--        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>-->
     </style>
 
     <style name="ToolbarStyle" parent="Widget.MaterialComponents.Toolbar">

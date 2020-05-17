@@ -31,7 +31,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode buildDateTime
-        versionName "0.3.4"
+        versionName "0.3.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -87,6 +87,8 @@ dependencies {
     implementation "com.google.android.material:material:$material_version"
     // google ads
     implementation 'com.google.firebase:firebase-ads:18.3.0'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
 
     // material-dialogs
     implementation 'com.afollestad.material-dialogs:core:3.1.0'

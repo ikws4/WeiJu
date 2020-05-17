@@ -116,4 +116,8 @@
     <string name="toast_color">Toast颜色</string>
     <string name="pref_longitude">经度</string>
     <string name="pref_latitude">维度</string>
+    <string name="export_config">导出配置</string>
+    <string name="import_config">导入配置</string>
+    <string name="copy_success">复制成功</string>
+    <string name="import_import_error">导入失败，请检查你的配置</string>
 </resources>
