@@ -8,12 +8,13 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
-import de.robv.android.xposed.XSharedPreferences
 import io.ikws4.library.xposedktx.*
 import io.ikws4.weiju.utilities.XSPUtils
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*
 
 
+@ExperimentalCoroutinesApi
 class ScreenHook(sp: XSPUtils) {
     private val isEnable = sp.getBoolean("is_enable_screen")
     private val screenOrientation = sp.getString("screen_orientation")
@@ -88,8 +89,12 @@ class ScreenHook(sp: XSPUtils) {
             val ctx = param.args[0] as Context
             val locale = Locale(languageRes.first(), languageRes.last())
             val configuration = Configuration(ctx.resources.configuration)
-            if (dpi != "Default") {
-                configuration.densityDpi = dpi.toInt()
+            if (dpi != "Default" || dpi != "") {
+                try {
+                    configuration.densityDpi = dpi.toInt()
+                } catch (e: Exception) {
+                    MainHook.log(e)
+                }
             }
             if (language != "Default") {
                 Locale.setDefault(locale)

@@ -6,6 +6,7 @@ import androidx.preference.EditTextPreference
 
 class EditTextPreference(context: Context, attributeSet: AttributeSet) : EditTextPreference(context, attributeSet) {
 
+
     override fun setText(text: String?) {
         super.setText(text)
         notifyChanged()

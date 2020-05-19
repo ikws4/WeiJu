@@ -146,11 +146,11 @@ class CategoryHomeFragment : Fragment() {
         val isEnableTranslation = configSP.getBoolean("is_enable_translation", false)
         val isEnableVariable = configSP.getBoolean("is_enable_variable", false)
         binding.apply {
-            statusBarItemColor = if (isEnableStatusBar) R.color.red else android.R.color.transparent
-            navBarItemColor = if (isEnableNavigationBar) R.color.green else android.R.color.transparent
-            screenItemColor = if (isEnableScreen) R.color.amber else android.R.color.transparent
-            translationItemColor = if (isEnableTranslation) R.color.google_blue else android.R.color.transparent
-            variableItemColor = if (isEnableVariable) R.color.blue else android.R.color.transparent
+            statusBarItemColor = if (isEnableStatusBar) R.color.red else R.color.iconDefaultColor
+            navBarItemColor = if (isEnableNavigationBar) R.color.green else R.color.iconDefaultColor
+            screenItemColor = if (isEnableScreen) R.color.amber else R.color.iconDefaultColor
+            translationItemColor = if (isEnableTranslation) R.color.google_blue else R.color.iconDefaultColor
+            variableItemColor = if (isEnableVariable) R.color.blue else R.color.iconDefaultColor
         }
     }
 

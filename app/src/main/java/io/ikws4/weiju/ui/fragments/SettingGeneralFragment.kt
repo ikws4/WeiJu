@@ -1,6 +1,8 @@
 package io.ikws4.weiju.ui.fragments
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import io.ikws4.weiju.R
@@ -13,13 +15,13 @@ class SettingGeneralFragment : PreferenceFragmentCompat() {
     }
 
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
-       return when (preference.key) {
+        return when (preference.key) {
             "report_bug" -> {
                 val message = LogcatManager.getSavedLog(context!!)
-                LogcatManager.show(context!!, message,true)
+                LogcatManager.show(context!!, message, true)
                 true
             }
-           else -> super.onPreferenceTreeClick(preference)
+            else -> super.onPreferenceTreeClick(preference)
         }
     }
 }

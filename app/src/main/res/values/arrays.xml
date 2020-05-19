@@ -27,6 +27,7 @@
         <item>460</item>
         <item>480</item>
         <item>500</item>
+        <item>Custom</item>
     </string-array>
 
     <string-array name="custom_dpi_values">
@@ -42,6 +43,7 @@
         <item>460</item>
         <item>480</item>
         <item>500</item>
+        <item>Custom</item>
     </string-array>
 
     <string-array name="language_entries">
@@ -295,5 +297,18 @@
         <item>cht</item>
         <item>vie</item>
     </string-array>
+
+    <string-array name="theme_entries">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System default</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>1</item>
+        <item>2</item>
+        <item>-1</item>
+    </string-array>
+
 
 </resources>

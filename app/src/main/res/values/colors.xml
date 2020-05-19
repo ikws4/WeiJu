@@ -10,7 +10,10 @@
 
     <color name="colorWhite">#ffffff</color>
 
+    <color name="titleTextColor">#000000</color>
+
     <!--icon tint-->
+    <color name="iconDefaultColor">#000000</color>
     <color name="gary">#757575</color>
     <color name="red">#e16b8c</color>
     <color name="green">#90b44b</color>

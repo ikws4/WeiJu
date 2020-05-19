@@ -20,6 +20,7 @@
         <item>460</item>
         <item>480</item>
         <item>500</item>
+        <item>自定义</item>
     </string-array>
 
     <string-array name="language_entries">
@@ -114,6 +115,13 @@
         <item>塔希提语</item>
         <item>马尔加什语	</item>
         <item>孟加拉语</item>
+    </string-array>
+
+
+    <string-array name="theme_entries">
+        <item>浅色</item>
+        <item>深色</item>
+        <item>系统默认设置</item>
     </string-array>
 
 </resources>

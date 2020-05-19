@@ -16,8 +16,8 @@
             android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stateListAnimator="@animator/appbar_layout_elevation"
-            android:fitsSystemWindows="true">
+            android:fitsSystemWindows="true"
+            android:stateListAnimator="@animator/appbar_layout_elevation">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/titleTextColor"
                     android:textSize="22sp"
                     tools:text="@string/app_name" />
 

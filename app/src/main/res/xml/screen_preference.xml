@@ -43,14 +43,10 @@
         android:key="is_cancel_dialog"
         android:title="@string/pref_cancel_dialog_title" />
 
-    <ListPreference
-        android:defaultValue="Default"
+    <io.ikws4.weiju.ui.preferences.EditTextPreference
         android:dependency="is_enable_screen"
-        android:entries="@array/custom_dpi_entries"
-        android:entryValues="@array/custom_dpi_values"
         android:key="custom_dpi"
         android:summary="%s"
-        android:title="DPI"
-        app:useSimpleSummaryProvider="true" />
+        android:title="DPI" />
 
 </PreferenceScreen>

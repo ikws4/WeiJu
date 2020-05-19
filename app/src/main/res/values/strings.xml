@@ -122,5 +122,6 @@
     <string name="import_config">Import config</string>
     <string name="copy_success">Copy success</string>
     <string name="import_import_error">Import failed, please check your configuration</string>
+    <string name="choose_theme">Choose theme</string>
 
 </resources>
